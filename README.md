@@ -46,9 +46,10 @@ signedKCSToken = kat.getSignedAccessToken()
 ## Use this balue in the 'x-knox-apitoken' header to call most KCSAPis (for 30mins) in the
 print(signedKCSToken) 
 ```
+Full python examples interacting with the KCS API can be found [here.](https://github.com/mattintech/KnoxCloudService-Python)
 
 ## TODO
 - docs
 - KM API Helper
-- create API examples for each service
+- add error correction
 
