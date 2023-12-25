@@ -1,13 +1,14 @@
-![status: active](https://img.shields.io/badge/status-active-green.svg)
-![status: release](https://img.shields.io/badge/release-v0.1.0-blue.svg)
-![status: branch](https://img.shields.io/badge/branch-master-lightgrey.svg)
+[![BuildStatus](https://github.com/mattintech/PyKATh/workflows/CI/badge.svg)](https://github.com/mattintech/PyKATh/actions/workflows/auto-build-publish.yml)
+[![PyPI Version](https://img.shields.io/pypi/v/PyKATh.svg)](https://pypi.org/project/PyKATh/)
+[![Active branch](https://img.shields.io/badge/branch-master-lightgrey.svg)](https://github.com/mattintech/PyKATh/tree/master/)
+
 
 <div style="text-align: right"> 
     <a href="https://www.buymeacoffee.com/mattintech" target="_blank">
     <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 </div>
 
-# KnoxAccessToken-python
+# Python Knox Access token - Helper (PyKATh)
 
 **This is not an offical Samsung library or repository**
 
@@ -16,13 +17,16 @@ A colleciton of python code that assists in the creation of a signed access toke
 ## Prerequesits 
 
 ```
-pip install PyKAT requests
+pip install PyKATh requests
 ```
 
 ## Getting Started
 ```
 ## Initialize the Knox Token Library 
 kat = knox_common.KnoxAccessToken(kcsKeyFilePath = 'keys.json', regionalServer = 'us-kcs-api.samsungknox.com', clientId = cId)
+signedKCSToken = kat.getSignedAccessToken()
+print(signedKCSToken) ## Use this balue in the 'x-knox-apitoken' header to call most KCSAPis (for 30mins) in the
+
 ```
 
 ## API Requests
