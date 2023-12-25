@@ -1,5 +1,5 @@
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 __title__ = "PyKATh"
 __description__ = "This library provides utility methods to generate and sign Knox Cloud Tokens using Python."
