@@ -12,7 +12,22 @@
 
 **This is not an offical Samsung library or repository**
 
-A colleciton of python code that assists in the creation of a signed access token to be used with the Samsung Knox Cloud Service 'KCS' APIs. 
+A colleciton of python code that assists in the creation of a signed access token to be used with the Samsung Knox Cloud Service 'KCS' APIs.  
+For more information on the flow of Samsung's Knox Cloud Authentication API - see their tutorial here: (https://docs.samsungknox.com/dev/knox-cloud-authentication/tutorial/tutorial-for-customers-generate-access-token/)
+
+
+## Currently supported KCS APIs
+
+This library can generate signed Tokens for the following Samsung KC Services:
+- Knox Mobile Enrollment ('KME')
+- Knox Conifgure ('KC')
+- Knox E-FOTA ('KE1')
+- Knox Asset Intelligence ('KAI')
+- Knox Guard ('KG')
+- Knox Deployment Program ('KDP')
+
+Todo
+- Knox Manage ('KM') is currently not supported, but work is in progress.
 
 ## Prerequesits 
 
@@ -22,19 +37,18 @@ pip install PyKATh requests
 
 ## Getting Started
 ```
-## Initialize the Knox Token Library 
+## Initialize the Knox Token Library. 
 kat = knox_common.KnoxAccessToken(kcsKeyFilePath = 'keys.json', regionalServer = 'us-kcs-api.samsungknox.com', clientId = cId)
-signedKCSToken = kat.getSignedAccessToken()
-print(signedKCSToken) ## Use this balue in the 'x-knox-apitoken' header to call most KCSAPis (for 30mins) in the
 
+## request a signed token for a specific KCS ClientId.
+signedKCSToken = kat.getSignedAccessToken()
+
+## Use this balue in the 'x-knox-apitoken' header to call most KCSAPis (for 30mins) in the
+print(signedKCSToken) 
 ```
 
-## API Requests
-I am currently taking requests to build examples in python.  If there is something you would like to see please click on the link below and log a feature request.
-[New Feature Here](https://github.com/mattintech/KnoxAccessToken-python/issues/new)
-
-Please make sure to add the label 'enhancement' and try and be as detailed as possible.  Provide examples where possible. 
-
-## Docs
-TODO
+## TODO
+- docs
+- KM API Helper
+- create API examples for each service
 
