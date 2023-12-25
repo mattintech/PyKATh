@@ -1,5 +1,5 @@
 [project]
-name = "PyKAT"
+name = "PyKATh"
 version = "0.1.0"
 dependencies = [
   "requests",
@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/mattintech/PyKAT"
-Issues = "https://github.com/mattintech/PyKAT/issues"
+Homepage = "https://github.com/mattintech/PyKATh"
+Issues = "https://github.com/mattintech/PyKATh/issues"

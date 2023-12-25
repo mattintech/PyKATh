@@ -1,4 +1,4 @@
-import pykat
+import pykath
 import requests
 import json
 
@@ -10,7 +10,7 @@ with open(clientIdFile, "r") as file:
 cId = clientIds['kme']
 
 ##Initialize Knox AccessToken
-kat = pykat.init(kcsKeyFilePath = 'keys.json', regionalServer = 'us-kcs-api.samsungknox.com', clientId = cId)
+kat = pykath.init(kcsKeyFilePath = 'keys.json', regionalServer = 'us-kcs-api.samsungknox.com', clientId = cId)
 
 signedClientId = kat.getSignedAccessToken()
 
