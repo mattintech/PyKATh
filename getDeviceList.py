@@ -1,15 +1,18 @@
-import KnoxAccessToken as kat
+import pykat
 import requests
 import json
 
-
-
-clientIdFile = "clientId.json"
+## Get ClientId from clientIds file
+clientIdFile = "clientIds.json"
 with open(clientIdFile, "r") as file:
     clientIds = json.load(file)
 
-clientId = clientIds['kme']
-signedClientId = kat.getAccessToken(clientId)
+cId = clientIds['kme']
+
+##Initialize Knox AccessToken
+kat = pykat.init(kcsKeyFilePath = 'keys.json', regionalServer = 'us-kcs-api.samsungknox.com', clientId = cId)
+
+signedClientId = kat.getSignedAccessToken()
 
 baseUrl = "https://us-kcs-api.samsungknox.com/kcs/v1/"
 

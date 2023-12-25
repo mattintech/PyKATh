@@ -1,0 +1,22 @@
+[project]
+name = "PyKAT"
+version = "0.1.0"
+dependencies = [
+  "requests",
+  "PyKTL"
+  ]
+authors = [
+  { name="Matt Hills", email="mattintech@gmail.com" },
+]
+description = "This library assists in the creation of signed Knox Cloud Access Tokens using python."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/mattintech/PyKAT"
+Issues = "https://github.com/mattintech/PyKAT/issues"

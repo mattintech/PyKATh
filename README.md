@@ -7,30 +7,27 @@
     <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 </div>
 
-# KnoxCloudService-python
+# KnoxAccessToken-python
 
 **This is not an offical Samsung library or repository**
 
-A colleciton of python code leveraging the Knox Cloud Service 'KCS' APIs via the PyKTL library. 
+A colleciton of python code that assists in the creation of a signed access token to be used with the Samsung Knox Cloud Service 'KCS' APIs. 
 
 ## Prerequesits 
 
 ```
-pip install PyKTL requests 
+pip install PyKAT requests
 ```
 
-
-
-## KCS Services
-- Knox Mobile Enrolment ('KME') - In Progress
-- Knox Manage ('KM') - In Progress
-- Knox E-FOTA ('KE1') - Not Started:
-- Knox Asset Intelligence ('KAI') - Not Started
-- Knox Guard ('KG') - Not Started: 
+## Getting Started
+```
+## Initialize the Knox Token Library 
+kat = knox_common.KnoxAccessToken(kcsKeyFilePath = 'keys.json', regionalServer = 'us-kcs-api.samsungknox.com', clientId = cId)
+```
 
 ## API Requests
 I am currently taking requests to build examples in python.  If there is something you would like to see please click on the link below and log a feature request.
-[New Feature Here](https://github.com/mattintech/KnoxCloudService-python/issues/new)
+[New Feature Here](https://github.com/mattintech/KnoxAccessToken-python/issues/new)
 
 Please make sure to add the label 'enhancement' and try and be as detailed as possible.  Provide examples where possible. 
 
