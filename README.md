@@ -35,7 +35,8 @@ Todo
 pip install PyKATh requests
 ```
 
-## Getting Started
+## Getting Started (KCS)
+KCS APIs (with the exception of the KM API) require accessToken in JWT format.   
 ```
 ## Initialize the Knox Token Library. 
 kat = knox_common.KnoxAccessToken(kcsKeyFilePath = 'keys.json', regionalServer = 'us-kcs-api.samsungknox.com', clientId = cId)
@@ -47,6 +48,9 @@ signedKCSToken = kat.getSignedAccessToken()
 print(signedKCSToken) 
 ```
 Full python examples interacting with the KCS API can be found [here.](https://github.com/mattintech/KnoxCloudService-Python)
+
+
+## Getting started (KM)
 
 ## TODO
 - docs

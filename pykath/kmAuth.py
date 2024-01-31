@@ -1,9 +1,20 @@
 import requests
+import json
 import os
 
+
+kmConfigFile = "kmCreds.json"
 def getBearerToken():
+    with open(kmConfigFile, 'r') as file:
+        kmApiConfig = json.load(file)
+    
+    ## put logic for json validation
+    server = kmApiConfig['kmServer']
+    apiUser = kmApiConfig['apiUser']
+    apiPass = kmApiConfig['apiPass']
+
     bearerToken=None
-    url = "https://us03.manage.samsungknox.com/emm/oauth/token"
+    url = f"https://{server}/emm/oauth/token"
     headers = {
         "Content-Type": "application/x-www-form-urlencoded"
     }
@@ -12,8 +23,8 @@ def getBearerToken():
     # example export apiuser="apiuser@domain.com"
     data = {
         "grant_type": "client_credentials",
-        "client_id": os.environ.get('apiuser'),
-        "client_secret": os.environ.get('apipass')
+        "client_id": apiUser,
+        "client_secret": apiPass
     }
 
     response = requests.post(url, headers=headers, data=data)
