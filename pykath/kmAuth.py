@@ -19,8 +19,6 @@ def getBearerToken():
         "Content-Type": "application/x-www-form-urlencoded"
     }
 
-    ## use environment varaibles instead of hard coding credentails
-    # example export apiuser="apiuser@domain.com"
     data = {
         "grant_type": "client_credentials",
         "client_id": apiUser,
